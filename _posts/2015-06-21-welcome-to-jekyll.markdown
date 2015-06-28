@@ -8,4 +8,4 @@ Today, I created an new account @ [github] and setup an blog using Jekyll.
 
 
 
-[github]: github.com
+[github]: http://github.com
