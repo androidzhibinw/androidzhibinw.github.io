@@ -66,7 +66,7 @@ Android 分析的文章很多，但是缺少好文。分析应用程序启动过
 
 再在来张图吧：
 
-![X Server Client Example ](250px-X_client_server_example.svg.png)
+![X Server Client Example ](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/250px-X_client_server_example.svg.png)
 
 [XLib][x-lib] 是 [X Window System Protocol][x-req] 协议的 Client 端的 C语言实现 , 将协议封装成了 C 语言函数供开发者使用。[XLib Wiki][x-lib] 里面有一段直接使用 [XLib][x-lib] 创建 Window 的代码示例，有兴趣可以看一下使用基础的协议如何实现GUI。
 
@@ -85,11 +85,11 @@ Android 的 [Activity][activity] 和 IOS 的 [UIViewController][u-v-c] 就是设
 
 [Activity][activity]　和　[UIViewController][u-v-c]　有很多相似的地方，下图(来自[这里][activity-uvc])展示了它们的生命周期：
 
-![activity-uiviewcontroller](images/activity-uiviewcontroller.png)
+![activity-uiviewcontroller](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/activity-uiviewcontroller.png)
 
 还有这个表格（来自[这里][table-a-uvc]）：
 
-![activity-uiviewcontroller](images/android-uiviewcontroller.png)
+![activity-uiviewcontroller](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/android-uiviewcontroller.png)
 
 ###启动过程概况
 1. Launcher 接收到点击事件，获取应用的信息，向 SystemServer(ActivityManagerService 简称AMS 运行在里面) 发起启动应用的请求。
@@ -103,7 +103,7 @@ Android 的 [Activity][activity] 和 IOS 的 [UIViewController][u-v-c] 就是设
 9. calculator 界面显示自屏幕上(还需细分)
 
 自己画了一张图，（没包含9) ，有点丑,呵呵：
-![app-start](images/app-process.png)
+![app-start](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/app-process.png)
 
 ###如何分析这个过程
 #### [官方文档][android-dev] 
@@ -178,7 +178,7 @@ StackTrace 就是上面贴的那一段，就不重复贴了。从这个 StackTra
 
 这个调用栈正好衔接上面的调用栈，上面是从 Launcher 通过 ActivityManagerProxy RPC 到 SystemServer(AMS) , 这里刚好 RPC 切换到 SystemServer（AMS) 进程。通过一系列调用 SystemServer(AMS)进程向 Launcher 发送 pause 的请求，同样是通过 RPC. 这一来一回，涉及到 app 进程和 SystemServer 的交互，涉及到 ActivityManagerNative, ActivityManagerService, ActivityManagerProxy, ApplicationThreadNative, ApplicationThread,ApplicationThreadProxy. 我画了一张图来展示它们的关系， 如下：
 
-![app-ams-communicate](images/android-app-system.png)
+![app-ams-communicate](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/android-app-system.png)
 
 通过这个图，我们就能清楚的看出来 ApplicationThreadProxy  schedulePauseActivity RPC 到 Launcher 程序会调用 ApplicationThread 的 schedulePauseActivity：
 
