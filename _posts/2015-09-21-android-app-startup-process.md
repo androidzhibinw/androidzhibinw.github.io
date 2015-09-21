@@ -6,6 +6,8 @@ date: 2015-09-21
 categories: android app startup activity
 ---
 
+学习并分享 Android  应用启动过程 => 
+
 ## 为什么要写这篇文章？
 
 ### 梳理总结
