@@ -1,12 +1,10 @@
 --- 
 layout: post 
-title: "android application startup process analysis"
+title: "Android 应用程序启动过程分析 "
 published: true
 date: 2015-09-21
 categories: android app startup activity
 ---
-
-# Android 应用程序启动过程分析 #
 
 ## 为什么要写这篇文章？
 
@@ -60,7 +58,7 @@ Android 分析的文章很多，但是缺少好文。分析应用程序启动过
 
 作为一个支持 GUI 的系统，还需提供GUI的支持。当然这包含很多方面，我指的是提供给应用程序一个创建 Window 的接口，让其可以通过 Window 与用户交互（显示内容，获取反馈等)。当然不只是这么简单，肯定需要一套 Window 管理的框架。 如 Linux 的 X Window System , 可以参考下面这个图。思考一下 Android 是怎么实现这个的？ （相信 Android 从 X Window 借鉴了不少）
 
-![X Window System](images/xorg.svg)
+![X Window System](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/250px-X_client_server_example.svg.png)
 
 > The X Window System was designed to allow multiple programs to share access to a common set of hardware. This hardware includes both input devices such as mice and keyboards, and output devices: video adapters and the monitors connected to them. A single process was designated to be the controller of the hardware, multiplexing access to the applications. This controller process is called the X server, as it provides the services of the hardware devices to the client applications. In essence, the service the Xserver provides is access, through the keyboard, mouse and display, to the X user.
 
