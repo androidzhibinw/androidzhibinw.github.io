@@ -1,7 +1,6 @@
-
 --- 
 layout: post 
-title: android application startup process analysis
+title: "android application startup process analysis"
 published: true
 date: 2015-09-21
 categories: android app startup activity
