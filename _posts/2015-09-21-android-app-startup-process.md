@@ -3,7 +3,7 @@ layout: post
 title: "Android 应用程序启动过程分析 "
 published: true
 date: 2015-09-21
-categories: android app startup activity
+categories: android app startup activity 应用程序 启动 分析
 ---
 
 学习并分享 Android  应用启动过程 => 
