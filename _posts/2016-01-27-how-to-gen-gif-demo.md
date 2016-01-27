@@ -21,12 +21,11 @@ One issue is that, it is not easy to find the video just created. Defaultly it p
 
 ##Generate GIF from video 
 
-[ezgif][ezgif] is a excellent site for gif, [ezgif-v2g][video_to_gif] inside [ezgif][ezgif] can convert video to gif online in a minute.
-
+[ezgif][ezgif] is a excellent site for gif, [ezgifv2g][video_to_gif] inside [ezgif][ezgif] can convert video to gif online in a minute.
 
 ##Demo it on Github 
 
-Now [github][Github] issues can support GIF, refer [file-attachement-github][File attachments on issues] on github.
+Now [github][Github] issues can support GIF, refer [fileattachementgithub][File attachments on issues] on github.
 
 when you drag gif to [github][Github]  issues, it will show like:
 
@@ -38,6 +37,6 @@ use this piece of code you can show it any where support markdown.
 [ezvid]:http://www.ezvid.com/ 
 
 [ezgif]:http://ezgif.com/
-[ezgif-v2g]:http://ezgif.com/video-to-gif
+[ezgifv2g]:http://ezgif.com/video-to-gif
 [github]:http://www.github.com
-[file-attachement-github]:https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/
+[fileattachementgithub]:https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/
