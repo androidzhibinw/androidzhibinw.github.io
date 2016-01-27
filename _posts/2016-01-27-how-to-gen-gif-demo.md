@@ -21,11 +21,11 @@ One issue is that, it is not easy to find the video just created. Defaultly it p
 
 ##Generate GIF from video 
 
-[ezgif][ezgif] is a excellent site for gif, [ezgifv2g][video_to_gif] inside [ezgif][ezgif] can convert video to gif online in a minute.
+[ezgif][ezgif] is a excellent site for gif, [video to gif ][ezgifv2g] inside [ezgif][ezgif] can convert video to gif online in a minute.
 
 ##Demo it on Github 
 
-Now [github][Github] issues can support GIF, refer [fileattachementgithub][File attachments on issues] on github.
+Now [github][Github] issues can support GIF, refer [here][fileattachementgithub] on github.
 
 when you drag gif to [github][Github]  issues, it will show like:
 
