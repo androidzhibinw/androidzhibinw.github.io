@@ -162,12 +162,12 @@ Dangerous Permission：
 
 - 如果应用请求一个 dangerous permission A，而且应用目前没有得到任何和A在相同 permission group PG的 permission，那么系统会显示一个对话框，对话框会显示应用尝试获取的 permission group PG，但是不会显示应用请求的特定的 permission A。 比如，一个应用请求 READ_CONTACTS， 系统会显示一个对话框说，应用需要访问 CONTACTS.
 
-- 如果应用请求一个 dangerous permission A ， 而应用已经得到一个另一个dangerous permission B 和 A 属于同一个 permission group,那么系统会立即 给予应用 permission B 而不会再给用户提示。 比如应用已经得到 READ_CONTACTS permission, 应用再请求 WRITE_CONTACTS, 系统会立即给予，不再提示。
+- 如果应用请求一个 dangerous permission A ， 而应用已经得到一个另一个dangerous permission B 和 A 属于同一个 permission group,那么系统会立即 给予应用 permission B 而不会再给用户提示。 比如应用已经得到 READ CONTACTS permission, 应用再请求 WRITE CONTACTS, 系统会立即给予，不再提示。
 
 >All dangerous Android system permissions belong to permission groups. If the device is running Android 6.0 (API level 23) and the app's targetSdkVersion is 23 or higher, the following system behavior applies when your app requests a dangerous permission:
 
->- If an app requests a dangerous permission listed in its manifest, and the app does not currently have any permissions in the permission group, the system shows a dialog box to the user describing the permission group that the app wants access to. The dialog box does not describe the specific permission within that group. For example, if an app requests the READ_CONTACTS permission, the system dialog box just says the app needs access to the device's contacts. If the user grants approval, the system gives the app just the permission it requested.
->- If an app requests a dangerous permission listed in its manifest, and the app already has another dangerous permission in the same permission group, the system immediately grants the permission without any interaction with the user. For example, if an app had previously requested and been granted the READ_CONTACTS permission, and it then requests WRITE_CONTACTS, the system immediately grants that permission.
+>- If an app requests a dangerous permission listed in its manifest, and the app does not currently have any permissions in the permission group, the system shows a dialog box to the user describing the permission group that the app wants access to. The dialog box does not describe the specific permission within that group. For example, if an app requests the READ CONTACTS permission, the system dialog box just says the app needs access to the device's contacts. If the user grants approval, the system gives the app just the permission it requested.
+>- If an app requests a dangerous permission listed in its manifest, and the app already has another dangerous permission in the same permission group, the system immediately grants the permission without any interaction with the user. For example, if an app had previously requested and been granted the READ CONTACTS permission, and it then requests WRITE CONTACTS, the system immediately grants that permission.
 
 
 在 Settings 里面，用户对 permission 的改变也是以 permission group 为粒度的。用户可以 enable/disable 一个 permission group， 而不是里面每一个 permissions.
