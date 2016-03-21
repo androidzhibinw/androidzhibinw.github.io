@@ -94,7 +94,7 @@ Android 运行时 permission
 
 要么不用，要么接受即使不合理的权限申请。为了解决这个问题，在 Android 6.0 (API level 23), 引入了 Runtime permission. 这种新的机制改变了原来在安装时给予权限的方式，允许用户任何时候改变赋予应用的权限。 在 Settings->Apps->选择要查看的app，在 Permissions 可以更改。如图：
 
-![https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/wechat-android-permission.png]
+![we-chat-permission](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/wechat-android-permission.png)
 
 
 新的这种方式给了用户更多的控制权，使得用户在更小的粒度上控制应用使用的权限，用户可以拒绝应用不合理的权限，而不影响基本功能。
