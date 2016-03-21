@@ -10,7 +10,7 @@ Android 运行时 permission
 
 ##运行时 permission
 
-从 Android 6.0 (API level 23) 开始， Android 开始支持 Runtime permission.这种方式是对以前在安装时Grant 给应用程序 permission的改进，在 api 23 以前，Android 应用程序在 AndroidManifest.xml 声明使用了哪些permission, 用户在安装是会看到应用使用了那些 permission.  如下：
+从 Android 6.0 (API level 23) 开始， Android 开始支持 Runtime permission.这种方式是对以前在安装时Grant 给应用程序 permission的改进，在 api 23 以前，Android 应用程序在 AndroidManifest.xml 声明使用了哪些permission, 用户在安装时会看到应用使用了那些 permission.  如下：
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -156,6 +156,7 @@ Dangerous Permission：
 
 在  Android 6.0 (API level 23) ，Android 将 dangerous permissions 分成了几个 permission groups.
 如下：
+![dangerous-permission](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/android-dangerous-permission.png)
 
 如果应用程序的 targetSdkVersion >=23 , 则会有如下的行为。
 
