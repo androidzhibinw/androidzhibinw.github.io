@@ -95,6 +95,7 @@ Android 运行时 permission
 要么不用，要么接受即使不合理的权限申请。为了解决这个问题，在 Android 6.0 (API level 23), 引入了 Runtime permission. 这种新的机制改变了原来在安装时给予权限的方式，允许用户任何时候改变赋予应用的权限。 在 Settings->Apps->选择要查看的app，在 Permissions 可以更改。如图：
 
 ![we-chat-permission](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/wechat-android-permission.png)
+![we-chat-permission2](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/android-wechat-permission2.png)
 
 
 新的这种方式给了用户更多的控制权，使得用户在更小的粒度上控制应用使用的权限，用户可以拒绝应用不合理的权限，而不影响基本功能。
@@ -206,6 +207,9 @@ ContextCompat.checkSelfPermission() (android-support-v4）可以检查应用是�
 如果应用需要一个 dangerours permission (AndroidManifest.xml 里声明)，需要请求用户授权这个 permission. Android 系统提供了一些 api 来完成这个请求，当调用 api 的时候，会弹出一个 Dialog 是不是授权应用使用这个 permission. 用户可以选择 允许，拒绝，拒绝时可以勾选不再提示。 如下图：
 
 
+![permission-ask](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/permission-dialog.png)
+![permission-ask2](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/permission-dialog-n-ask-again.png)
+
 有一种场景也需要考虑，当应用去请求一个 dangerous permission的时候，如果用户之前拒绝过这个权限，应用可能想要了解这种情况并给予用户一定的解释。 Android 提供了 **shouldShowRequestPermissionRationale()** 这个 api. 
 这个 api 会返回 True , 如果 app 请求过这个权限并且被用户拒绝了。 
 
@@ -276,6 +280,13 @@ demo code:
 
 用户在处理 permission dialog 的时候，可以选择拒绝的同时，勾选 Don't ask again. 在这种情况下，app 使用requestPermissions() ，系统会直接拒绝（不会再提示用户), 并回调 onRequestPermissionsResult()， 结果为 PERMISSION_DENIED。
 
+
+Wechat 已经支持 targetSDKVersion 23, 启动时会有如下效果:
+
+如果一些权限没有得到，wechat 会退出，除非用户在 Settings 里启用他们。
+
+![wechat-ask1](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/android-wechat-permssion3.png)
+![wechat-ask2](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-21/android-wechat-permission4.png)
 
 
 [1]:http://developer.android.com/training/permissions/requesting.html

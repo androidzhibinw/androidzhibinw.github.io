@@ -2,7 +2,7 @@
 layout: post 
 title: "title example"
 published: false
-date:
+date: 2016-01-01
 categories: 
 ---
 
