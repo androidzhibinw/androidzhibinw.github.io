@@ -2,7 +2,7 @@
 layout: post 
 title: "Android Runtime Permission"
 published: true
-date:2016-03-21
+date: 2016-03-21
 categories: android runtime permission
 ---
 
