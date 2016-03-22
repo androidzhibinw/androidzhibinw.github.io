@@ -2,7 +2,7 @@
 layout: post 
 title: "How Messaging Implement Runtime Permission"
 published: true
-date:2016-03-21
+date: 2016-03-22
 categories: android runtime permission messaging
 ---
 
