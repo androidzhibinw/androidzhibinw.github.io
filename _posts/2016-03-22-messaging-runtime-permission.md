@@ -23,7 +23,7 @@ Android M 上新增加了一个 [open source 的 SMS/MMS 应用 Messaging][1]，
 
 - 如果 [Messaging][1] 启动已获得三个基本权限组：Contacts,Phone,SMS，则直接进入应用里面，显示 ConversationList。
 
-![messaing-default-sms](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-22/messaing-default-sms.png)
+![normal](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-03-22/normal.png)
 
 - 如果 [Messaging][1] 启动未获得三个基本权限组：Contacts,Phone,SMS， [Messaging][1] 会显示一个需要三个基本权限的界面，上面有两个 Buttons , EXIT 和 NEXT， 点 EXIT 直接退出， 点 NEXT，会弹出三个请求用户授权 三个基本权限组：Contacts,Phone,SMS 的 Dialog, 如果 用户都 Allow 了，进入，否则，重复弹出请求收取的 Dialog，直到都 Allow 或者 选择 DENY + Never ask again.
 
