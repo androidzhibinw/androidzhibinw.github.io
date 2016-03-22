@@ -6,10 +6,6 @@ date: 2016-03-21
 categories: android runtime permission
 ---
 
-Android 运行时 permission 
-
-##运行时 permission
-
 从 Android 6.0 (API level 23) 开始， Android 开始支持 Runtime permission.这种方式是对以前在安装时Grant 给应用程序 permission的改进，在 api 23 以前，Android 应用程序在 AndroidManifest.xml 声明使用了哪些permission, 用户在安装时会看到应用使用了那些 permission.  如下：
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />

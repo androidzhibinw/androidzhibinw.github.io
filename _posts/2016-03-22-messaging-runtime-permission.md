@@ -6,8 +6,6 @@ date: 2016-03-22
 categories: android runtime permission messaging
 ---
 
- How Messaging Implement Runtime Permission
-
 Android M 上新增加了一个 [open source 的 SMS/MMS 应用 Messaging][1]，这个应用支持了 Android 6.0 上的 runtime permission, 来分析下它是怎么做的。如果不了解 Android 6.0 的 runtime permission , 可以看[这里][2],或 [官方文档 （需翻墙)][3]。
 
 先看下 [Messaging][1] 的行为 （前提：Messaging 安装之前系统有SMS/MMS 应用) ：
