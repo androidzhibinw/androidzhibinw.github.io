@@ -56,6 +56,7 @@ Android M 上新增加了一个 [open source 的 SMS/MMS 应用 Messaging][1]，
 [frameworks/base/core/res/AndroidManifest.xml][4]
 
 example:
+
     <!-- Used for runtime permissions related to user's contacts and profile. -->
     <permission-group android:name="android.permission-group.CONTACTS"
         android:icon="@drawable/perm_group_contacts"
@@ -181,14 +182,13 @@ Messaging 采用了一种折中的方式,基本功能权限在进入之前申请
 在 [Messaing][1] 里面,所有 Activity 的入口都要调用 [redirectToPermissionCheckIfNeeded][8] 检查是否取得基本权限,如果没有则跳转到  [PermissionCheckActivity.java][9], 在这个 Activity 里面会请求三个基本权限组,处理得到授权和得不到授权的情况: 
 
 - 得到授权,[redirect][10] 到应用主入口  [ConversationListActivity][11].
-- 如果没有得到授权,调用 [tryRequestPermission]:[12] 提示用户授权.直到用户授权(同上),或者选择 Don't ask again.如果未得到用户授权并且用户勾选了 Don't ask again. 在点击 Next 会直接返回失败,用户不会受到提示.这种情况下,Messaing 会显示需要到Settings->Apps->Messaing->Permission 去给予授权,同时 Next button 变成了Settings button,点击它会跳转到 Settings->Apps->Messaing->Permission
+- 如果没有得到授权,调用 [tryRequestPermission][12] 提示用户授权.直到用户授权(同上),或者选择 Never ask again.如果未得到用户授权并且用户勾选了 Never ask again. 在点击 Next 会直接返回失败,用户不会受到提示.这种情况下,Messaing 会显示需要到Settings->Apps->Messaing->Permission 去给予授权,同时 Next button 变成了Settings button,点击它会跳转到 Settings->Apps->Messaing->Permission
 
 
 2. Activity 的入口都要调用 [redirectToPermissionCheckIfNeeded][8] 检查授权,那么在哪里 onCreate  or onResume 呢? [Messaing][1] 是在几个基类的 onCreate 去检查的,其他 Activity 继承它们.
 
 
     public class BaseBugleActivity extends Activity {
-    @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (UiUtils.redirectToPermissionCheckIfNeeded(this)) {
@@ -202,7 +202,7 @@ Messaging 采用了一种折中的方式,基本功能权限在进入之前申请
 
 看如下log:
 
-    03-23 15:08:20.122  2197  4415 I ActivityManager: Killing 8050:com.android.messaging/u0a112 (adj 9): **permissions revoked**
+    03-23 15:08:20.122  2197  4415 I ActivityManager: Killing 8050:com.android.messaging/u0a112 (adj 9): permissions revoked
     03-23 15:08:20.314  2197  4431 W ActivityManager: Spurious death for ProcessRecord{7c20ad3 0:com.android.messaging/u0a112}, curProc for 8050: null
     03-23 15:08:25.175  2197  3867 I ActivityManager: Start proc 8216:com.android.messaging/u0a112 for activity com.android.messaging/.ui.conversation.ConversationActivity
 
