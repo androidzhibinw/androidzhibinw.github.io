@@ -25,9 +25,32 @@ libgdx 是个开源 game engine 框架， 支持多个平台(Android,IOS,WEB,Des
 
 就可以看到：
 
-
 ![gdx-setup](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-07-06/gdx-setup.png)
 
+
+Destination 和 Android SDK 选好，点击 Generate.
+
+这时候可能会弹出 Warning ：
+
+> You have a more recent version of andoid build tool than recommanded. Do you want to use your more recent version. 
+
+意思是你的 Android SDK 支持的最高平台比 libgdx 推荐的要高，是否用你 SDK 最高的。如果你的 java 是1.8 了，可以选择是， 否则选择否。Android api 24 以上需要 java 1.8 编译。如果不知道可以无脑选择否。
+
+然后就生成好了 ， 使用 Android Stdio 导入 
+
+> To import to Intellij IDEA: File -> Open -> build.gradle
+
+打开 Android Stdio => File=>New=>Import Project => 选择 sample (上面生成的) 里面的 build.gradle 
+
+导入好了， Android project 可以直接 Run。
+
+Desktop Project 需要 Edit Configurations， 添加一个 Application , 填好下面参数： 
+
+![gdx-setup](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-07-06/add-configuration.png)
+
+然后就可以 run 了， 成功出来： 
+
+![gdx-setup](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-07-06/success.png)
 
 
 
