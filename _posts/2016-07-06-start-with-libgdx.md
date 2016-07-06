@@ -25,7 +25,7 @@ libgdx 是个开源 game engine 框架， 支持多个平台(Android,IOS,WEB,Des
 
 就可以看到：
 
-![gdx-setup](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-07-06/gdx-setup.png 
+![gdx-setup](https://raw.githubusercontent.com/androidzhibinw/androidzhibinw.github.io/master/images/2016-07-06/gdx-setup.png
 
 
 
