@@ -1,9 +1,9 @@
 --- 
-layout: post 
+layout: post
 title: "Start With Libgdx for  Android on Windows"
 published: true
 date: 2016-07-06
-categories:libgdx,game,android 
+categories: libgdx,game,android
 ---
 
 libgdx 是个开源 game engine 框架， 支持多个平台(Android,IOS,WEB,Desktop)，主要语言是 Java。 [主页][libgdx] , [Github][libgdx-github]
@@ -17,7 +17,7 @@ libgdx 是个开源 game engine 框架， 支持多个平台(Android,IOS,WEB,Des
 
 - [Wiki][create-libgdx-project]
 
-首先需要下载一个 *gdx-setup.jar * 这个工具包可以提供GUI界面帮助创建一个完整的 libgdx project.
+首先需要下载一个 gdx-setup.jar 这个工具包可以提供GUI界面帮助创建一个完整的 libgdx project.
 
 运行：
 
