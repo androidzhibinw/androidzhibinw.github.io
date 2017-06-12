@@ -6,7 +6,7 @@ date: 2016-07-06
 categories: libgdx,game,android
 ---
 
-libgdx 是个开源 game engine 框架， 支持多个平台(Android,IOS,WEB,Desktop)，主要语言是 Java。 [主页][libgdx] , [Github][libgdx-github]
+libgdx 是个开源 game engine， 支持多个平台(Android,IOS,WEB,Desktop)，主要语言是 Java。 [主页][libgdx] , [Github][libgdx-github]
 
 ##1. 安装 Java 和　Android Stdio
 
